@@ -7,9 +7,9 @@
 <body>
 	<ul>
 		<li>税抜き価格</li>
-		<span th:text="${application.outTax}">税抜き円</span>
+		<span th:text="${#numbers.formatInteger(application.outTax,4,'COMMA')}">税抜き円</span>
 		<li>税込価格</li>
-		<span th:text="${application.inTax}">税込価格</span>
+		<span th:text="${#numbers.formatInteger(application.inTax,4,'COMMA')}">税込価格</span>
 	</ul>
 
 </body>

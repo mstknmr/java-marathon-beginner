@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>税抜き価格</li>
+		<span th:text="${application.outTax}">税抜き円</span>
+		<li>税込価格</li>
+		<span th:text="${application.inTax}">税込価格</span>
+	</ul>
+
+</body>
+</html>

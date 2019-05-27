@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <form class="user-search-form" action="user-info-view.html" th:action="@{/search/user-info-view}" method="post">
+   ID : <input type="number" name="id"> <br>
+   <input type="submit" name="submit" value="検索">
+ </form>
+</body>
+</html>

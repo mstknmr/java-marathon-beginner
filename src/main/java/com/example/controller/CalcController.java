@@ -13,12 +13,12 @@ public class CalcController {
 	HttpSession session;
 	
 	
-	@RequestMapping("/input-value")
+	@RequestMapping("")
 	public String index() {
 		return "input-value";
 	}
 	
-	@RequestMapping("/calclation")
+	@RequestMapping("/calclate")
 	public String calc(Integer num1,Integer num2) {
 		
 		session.setAttribute("num1", num1);

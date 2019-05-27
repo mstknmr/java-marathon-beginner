@@ -18,6 +18,7 @@ public class CalcController {
 		return "input-value";
 	}
 	
+	@RequestMapping("/calclation")
 	public String calc(Integer num1,Integer num2) {
 		
 		session.setAttribute("num1", num1);
@@ -26,4 +27,15 @@ public class CalcController {
 		
 		return "output-value";
 	}
+	
+	@RequestMapping("/output-value1")
+	public String outputValue() {
+		return "output-value";
+	}
+
+	@RequestMapping("/output-value2")
+	public String outputValue2() {
+		return "output-value2";
+	}	
+	
 }

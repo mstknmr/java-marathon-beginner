@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+<div class="allItems">
+  <table>
+    <tr th:each="item,status:${application.allItems}">
+      <td th:text="${item.name}">商品名</td>
+      <td th:text="${item.price}"></td>
+      <td>
+        <form class="add-cart-form" action="item-and-cart.html" th:action="@{/shopping/add-cart}" method="post">
+          <input type="hidden" name="index" th:value="${status.count}">
+          <input type="submit" value="カートに追加">
+        </form>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="itemsInCart">
+  <table>
+    <tr th:each="items,status:${session.itemInCartList}">
+      <td th:text="${items.name}">商品名</td>
+      <td th:text="${items.price}"></td>
+      <td>
+      	<form class="remove-cart-form" action="item-remove-cart.html" th:action="@{/shopping/delete-cart}" method="post">
+       	<input type="hidden" name="index" th:value="${status.count}">
+        <input type="submit" value="削除">
+        </form>
+      </td>
+    </tr>
+  </table>
+  合計金額　<span th:text="${session.sumPrice}"></span> 円
+</div>
+
+</body>
+
+</html>

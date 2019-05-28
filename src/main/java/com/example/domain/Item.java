@@ -3,6 +3,23 @@ package com.example.domain;
 public class Item {
 	private String name;
 	private Integer price;
+	
+	
+
+	public Item(String name, Integer price) {
+		super();
+		this.name = name;
+		this.price = price;
+	}
+	
+	@Override
+	public String toString() {
+		return "Item [name=" + name + ", price=" + price + "]";
+	}
+
+	public Item() {
+		
+	}
 
 	public String getName() {
 		return name;
